@@ -21,3 +21,14 @@
 *.i*86
 *.x86_64
 *.hex
+
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+!default.xcworkspace
+xcuserdata
+profile
+DerivedData
+Tests/Pods
+Tests/Podfile.lock
