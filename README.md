@@ -26,10 +26,10 @@ Iterate through all days in a month
   }
 ```
 
-MRCYear iterates through its MRCMonth objects
-MRCMonth iterates through its MRCDay objects
-MRCWeek iterates through its MRCDay objects
-MRCDay iterates through its NSdates for each hour of the day
+* MRCYear iterates through its MRCMonth objects
+* MRCMonth iterates through its MRCDay objects
+* MRCWeek iterates through its MRCDay objects
+* MRCDay iterates through its NSDates for each hour of the day
 
 
 Overall, it should be pretty easy to use.
