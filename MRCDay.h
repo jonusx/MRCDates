@@ -25,12 +25,26 @@
 #import <Foundation/Foundation.h>
 #import "MRCDate.h"
 
+/**
+ `MRCDay` Represents a 'day' for the current calendar.
+ */
 @interface MRCDay : MRCDate
 
+/**
+ The short weekday abbreviation for the day, provided by the current calendar
+ */
 @property (nonatomic, strong, readonly) NSString *weekDayNameShort;
+
+/**
+ Date components object constructed for this day.
+ */
 @property (nonatomic, copy) NSDateComponents *components;
 
-- (instancetype)initWithDate:(NSDate *)date;
+/**
+ Basic check to see if the day falls in a weekend
+ 
+ @returns BOOL if day is in the weekend
+ */
 - (BOOL)isInWeekend;
 
 @end

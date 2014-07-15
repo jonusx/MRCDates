@@ -25,6 +25,9 @@
 #import <Foundation/Foundation.h>
 #import "MRCDate.h"
 
+/**
+ `MRCWeek` Represents a 'week' for the current calendar.
+ */
 @interface MRCWeek : MRCDate
 
 @end

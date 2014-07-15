@@ -25,8 +25,18 @@
 #import <Foundation/Foundation.h>
 #import "MRCDate.h"
 
+/**
+ `MRCYear` Represents a 'year' for the current calendar.
+ */
 @interface MRCYear : MRCDate
 
+/**
+ Designated initializer
+ 
+ @param year The number year to build with
+ 
+ @return Initialized `MRCYear`.
+ */
 + (instancetype)yearFromYearNumber:(NSUInteger)year;
 
 @end

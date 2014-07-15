@@ -27,14 +27,49 @@
 
 @class MRCDay, MRCWeek;
 
+/**
+ `MRCMonth` Represents a 'month' for the current calendar.
+ */
 @interface MRCMonth : MRCDate
 
+/**
+ Number of weeks in this month
+ */
 @property (nonatomic, assign, readonly) NSUInteger numberOfWeeks;
+
+/**
+ When set to yes, the month will include a full week (7 days gregorian) for each week, including days that aren't in the 
+ current month. The first week will be prefixed with the last months days as the last week will be suffixed with 
+ the first days in the next month.
+ */
 @property (nonatomic, assign, getter = isUsingBlockDates) BOOL useBlockDates;
+
+/**
+ Number of the month for use in calendar calculations
+ */
 @property (nonatomic, assign, readonly) NSUInteger monthNumber;
 
+/**
+ Designated initializer
+ 
+ @param month The month number used in calendar components. 1 == January, so on
+ 
+ @return Initialized `MRCMonth`.
+ */
 - (instancetype)initWithMonth:(NSInteger)month;
+
+/**
+ @param date `NSDate` to build the month around
+ 
+ @return Initialized `MRCMonth`.
+ */
 - (instancetype)initWithDate:(NSDate *)date;
+
+/**
+ @param weekNumber The week number used in calendar components. Uses the months cached subelement `MRCDay` objects to construct the `MRCWeek`
+ 
+ @return Initialized `MRCWeek`.
+ */
 - (MRCWeek *)week:(NSInteger)weekNumber;
 
 @end
