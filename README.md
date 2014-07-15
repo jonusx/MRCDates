@@ -3,6 +3,8 @@ MRCDates
 
 MRCDate and MRCDateRange is a more flexible way to deal with dates. Very rarely are we ever dealing with concrete, pinpoint dates. 
 
+MRCDates is still a work in progress. Use at your own risk. :-P
+
 Usage
 -----
 
