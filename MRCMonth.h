@@ -54,9 +54,17 @@
  
  @param month The month number used in calendar components. 1 == January, so on
  
- @return Initialized `MRCMonth`.
+ @return Initialized `MRCMonth` for month number in current year.
  */
 - (instancetype)initWithMonth:(NSInteger)month;
+
+/**
+ @param month The month number used in calendar components. 1 == January, so on
+ @param year The year Ex: 2005
+ 
+ @return Initialized `MRCMonth` for month number in given year.
+ */
+- (instancetype)initWithMonth:(NSInteger)month year:(NSInteger)year;
 
 /**
  @param date `NSDate` to build the month around

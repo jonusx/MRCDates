@@ -52,6 +52,13 @@
     return [[MRCMonth alloc] initWithDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
 }
 
+- (instancetype)initWithMonth:(NSInteger)month year:(NSInteger)year {
+    NSDateComponents *components = [NSDateComponents new];
+    components.month = month;
+    components.year = year;
+    return [[MRCMonth alloc] initWithDate:[[NSCalendar currentCalendar] dateFromComponents:components]];
+}
+
 - (instancetype)initWithDate:(NSDate *)date {
     self = [super initWithDate:date];
     _weekCache = [@[[NSNull null], [NSNull null], [NSNull null], [NSNull null], [NSNull null], [NSNull null], [NSNull null]] mutableCopy];
